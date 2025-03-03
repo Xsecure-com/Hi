@@ -1,1 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Druid Group</title>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="terminal" class="terminal active">
+        <pre id="terminal-output"></pre>
+        <input type="text" id="auth-input" class="terminal-input" placeholder="Enter credentials to proceed: " style="display: none;">
+    </div>
 
+    <div class="main-container" id="homepage" style="display: none;">
+        <section id="home">
+            <div class="code-bg">
+                <h2 class="cryptic">Druid Group – Shadow Ops</h2>
+                <p class="cryptic-sub">Data is power. Power is control.</p>
+                <p class="cryptic-sub">Are you here for knowledge or destruction?</p>
+                <div class="connections">
+                    <p>Live Connections: <span id="live-ips">[192.168.1.45]</span></p>
+                </div>
+                <div class="access-levels">
+                    <button class="btn gang-btn" onclick="showSection('chat')">Public Access – Forum/News</button>
+                    <button class="btn gang-btn" onclick="alert('Invite code required – Contact @Druid_eth')">Encrypted Files (Locked)</button>
+                    <button class="btn gang-btn" onclick="alert('Market access locked – Hit Telegram for drops')">Live Market (Locked)</button>
+                </div>
+                <p class="crypto">Crypto Only – XMR, BTC (Fake Address: 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa) <a href="https://t.me/Druid_eth" target="_blank" class="gang-btn-link">Hit Telegram</a></p>
+                <div id="activity-feed" class="activity"></div>
+                <div id="ai-assistant" class="assistant"></div>
+            </div>
+        </section>
+
+        <section id="tools">
+            <h2>Tools</h2>
+            <div class="grid">
+                <div class="item">
+                    <h3>Stealer Logs</h3>
+                    <p>DB dumps, creds - $300 XMR</p>
+                    <div class="btn-group">
+                        <a href="https://t.me/Druid_eth" target="_blank" class="btn">
+                            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-10 10v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6A10 10 0 0 0 12 2zm0 2a8 8 0 0 1 8 8v4H4v-4a8 8 0 0 1 8-8zm0 14a6 6 0 0 1-6-6h12a6 6 0 0 1-6 6z"/></svg>
+                            Buy
+                        </a>
+                        <button class="btn" onclick="showSection('tool-stealer-logs')">
+                            <svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8zm0 14a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6zm-1-6h2v2h-2zm0-4h2v2h-2z"/></svg>
+                            Options
+                        </button>
+                    </div>
+                </div>
+                <div class="item">
+                    <h3>DDoS-For-Hire</h3>
+                    <p>Crash sites - $400 BTC</p>
+                    <div class="btn-group">
+                        <a href="https://t.me/Druid_eth" target="_blank" class="btn">
+                            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm4-8l-4 4-4-4 4-4 4 4z"/></svg>
+                            Buy
+                        </a>
+                        <button class="btn" onclick="showSection('tool-ddos-for-hire')">
+                            <svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8zm0 14a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6zm-1-6h2v2h-2zm0-4h2v2h-2z"/></svg>
+                            Options
+                        </button>
+                    </div>
+                </div>
+                <div class="item">
+                    <h3>Fake Login Pages</h3>
+                    <p>Trap creds - $150 XMR</p>
+                    <div class="btn-group">
+                        <a href="https://t.me/Druid_eth" target="_blank" class="btn">
+                            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm2-10h-4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1z"/></svg>
+                            Buy
+                        </a>
+                        <button class="btn" onclick="showSection('tool-fake-login-pages')">
+                            <svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8zm0 14a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6zm-1-6h2v2h-2zm0-4h2v2h-2z"/></svg>
+                            Options
+                        </button>
+                    </div>
+                </div>
+                <div class="item">
+                    <h3>Wi-Fi Hacking</h3>
+                    <p>Net breaker - $200 BTC</p>
+                    <div class="btn-group">
+                        <a href="https://t.me/Druid_eth" target="_blank" class="btn">
+                            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-10 10 10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2zm0 18a8 8 0 0 1-8-8c0-1.6.5-3 1.3-4.2L12 14.6l6.7-6.8A8 8 0 0 1 20 12a8 8 0 0 1-8 8z"/></svg>
+                            Buy
+                        </a>
+                        <button class="btn" onclick="showSection('tool-wifi-hacking')">
+                            <svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8zm0 14a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6zm-1-6h2v2h-2zm0-4h2v2h-2z"/></svg>
+                            Options
+                        </button>
+                    </div>
+                </div>
+                <div class="item">
+                    <h3>Session Hijacker</h3>
+                    <p>Cookie thief - $250 XMR</p>
+                    <div class="btn-group">
+                        <a href="https://t.me/Druid_eth" target="_blank" class="btn">
+                            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm4-8h-3v3a1 1 0 0 1-2 0v-3H8a1 1 0 0 1 0-2h3V8a1 1 0 0 1 2 0v3h3a1 1 0 0 1 0 2z"/></svg>
+                            Buy
+                        </a>
+                        <button class="btn" onclick="showSection('tool-session-hijacker')">
+                            <svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8zm0 14a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6zm-1-6h2v2h-2zm0-4h2v2h-2z"/></svg>
+                            Options
+                        </button>
+                    </div>
+                </div>
+                <div class="item">
+                    <h3>Cred Stealer</h3>
+                    <p>Login grab - $180 BTC</p>
+                    <div class="btn-group">
+                        <a href="https://t.me/Druid_eth" target="_blank" class="btn">
+                            <svg viewBox="0 0 24 24"><path d="M18 7h-2V6a4 4 0 0 0-8 0v1H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zm-8-1a2 2 0 0 1 4 0v1h-4zm8 12H6V9h12z"/></svg>
+                            Buy
+                        </a>
+                        <button class="btn" onclick="showSection('tool-cred-stealer')">
+                            <svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8zm0 14a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6zm-1-6h2v2h-2zm0-4h2v2h-2z"/></svg>
+                            Options
+                        </button>
+                    </div>
+                </div>
+                <div class="item">
+                    <h3>RATs</h3>
+                    <p>Remote rig - $350 XMR</p>
+                    <div class="btn-group">
+                        <a href="https://t.me/Druid_eth" target="_blank" class="btn">
+                            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm3-6l-3 3-3-3 3-3 3 3z"/></svg>
+                            Buy
+                        </a>
+                        <button class="btn" onclick="showSection('tool-rats')">
+                            <svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8zm0 14a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6zm-1-6h2v2h-2zm0-4h2v2h-2z"/></svg>
+                            Options
+                        </button>
+                    </div>
+                </div>
+                <div class="item">
+                    <h3>ATM Malware</h3>
+                    <p>Card skimmer - $450 BTC</p>
+                    <div class="btn-group">
+                        <a href="https://t.me/Druid_eth" target="_blank" class="btn">
+                            <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zM4 8h16V6h-16zm0 10v-6h16v6z"/></svg>
+                            Buy
+                        </a>
+                        <button class="btn" onclick="showSection('tool-atm-malware')">
+                            <svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8zm0 14a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6zm-1-6h2v2h-2zm0-4h2v2h-2z"/></svg>
+                            Options
+                        </button>
+                    </div>
+                </div>
+                <div class="item">
+                    <h3>Exploit Kits</h3>
+                    <p>Flaw hitter - $500 XMR</p>
+                    <div class="btn-group">
+                        <a href="https://t.me/Druid_eth" target="_blank" class="btn">
+                            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm4-8l-4 4-4-4 4-4 4 4z"/></svg>
+                            Buy
+                        </a>
+                        <button class="btn" onclick="showSection('tool-exploit-kits')">
+                            <svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8zm0 14a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6zm-1-6h2v2h-2zm0-4h2v2h-2z"/></svg>
+                            Options
+                        </button>
+                    </div>
+                </div>
+                <div class="item">
+                    <h3>Cryptojacker</h3>
+                    <p>Mine stealer - $300 BTC</p>
+                    <div class="btn-group">
+                        <a href="https://t.me/Druid_eth" target="_blank" class="btn">
+                            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm2-10h-4v4h4v-4z"/></svg>
+                            Buy
+                        </a>
+                        <button class="btn" onclick="showSection('tool-cryptojacker')">
+                            <svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8zm0 14a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6zm-1-6h2v2h-2zm0-4h2v2h-2z"/></svg>
+                            Options
+                        </button>
+                    </div>
+                </div>
+                <div class="item">
+                    <h3>Brute Forcer</h3>
+                    <p>Pass smasher - $200 XMR</p>
+                    <div class="btn-group">
+                        <a href="https://t.me/Druid_eth" target="_blank" class="btn">
+                            <svg viewBox="0 0 24 24"><path d="M18 7h-2V6a4 4 0 0 0-8 0v1H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zm-8-1a2 2 0 0 1 4 0v1h-4zm8 12H6V9h12z"/></svg>
+                            Buy
+                        </a>
+                        <button class="btn" onclick="showSection('tool-brute-forcer')">
+                            <svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8zm0 14a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6zm-1-6h2v2h-2zm0-4h2v2h-2z"/></svg>
+                            Options
+                        </button>
+                    </div>
+                </div>
+                <div class="item">
+                    <h3>MITM Tools</h3>
+                    <p>Traffic snag - $280 BTC</p>
+                    <div class="btn-group">
+                        <a href="https://t.me/Druid_eth" target="_blank" class="btn">
+                            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-10 10 10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2zm0 18a8 8 0 0 1-8-8c0-1.6.5-3 1.3-4.2L12 14.6l6.7-6.8A8 8 0 0 1 20 12a8 8 0 0 1-8 8z"/></svg>
+                            Buy
+                        </a>
+                        <button class="btn" onclick="showSection('tool-mitm-tools')">
+                            <svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8zm0 14a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6zm-1-6h2v2h-2zm0-4h2v2h-2z"/></svg>
+                            Options
+                        </button>
+                    </div>
+                </div>
+                <div class="item">
+                    <h3>Keylogger</h3>
+                    <p>Type tracker - $220 XMR</p>
+                    <div class="btn-group">
+                        <a href="https://t.me/Druid_eth" target="_blank" class="btn">
+                            <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm-8 10H8v-2h4v-2H8V8h4V6h2v2h4v2h-4v2h4v2h-4z"/></svg>
+                            Buy
+                        </a>
+                        <button class="btn" onclick="showSection('tool-keylogger')">
+                            <svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8zm0 14a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6zm-1-6h2v2h-2zm0-4h2v2h-2z"/></svg>
+                            Options
+                        </button>
+                    </div>
+                </div>
+                <div class="item">
+                    <h3>Phishing Kits</h3>
+                    <p>Phish pack - $180 BTC</p>
+                    <div class="btn-group">
+                        <a href="https://t.me/Druid_eth" target="_blank" class="btn">
+                            <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm-1 2l-7 5-7-5zM4 18V8l8 5 8-5v10z"/></svg>
+                            Buy
+                        </a>
+                        <button class="btn" onclick="showSection('tool-phishing-kits')">
+                            <svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8zm0 14a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6zm-1-6h2v2h-2zm0-4h2v2h-2z"/></svg>
+                            Options
+                        </button>
+                    </div>
+                </div>
+                <div class="item">
+                    <h3>Zero-Day Exploits</h3>
+                    <p>Unpatched hit - $800 XMR</p>
+                    <div class="btn-group">
+                        <a href="https://t.me/Druid_eth" target="_blank" class="btn">
+                            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm4-8l-4 4-4-4 4-4 4 4z"/></svg>
+                            Buy
+                        </a>
+                        <button class="btn" onclick="showSection('tool-zero-day-exploits')">
+                            <svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8zm0 14a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6zm-1-6h2v2h-2zm0-4h2v2h-2z"/></svg>
+                            Options
+                        </button>
+                    </div>
+                </div>
+                <div class="item">
+                    <h3>Botnets</h3>
+                    <p>Zombie net - $600 BTC</p>
+                    <div class="btn-group">
+                        <a href="https://t.me/Druid_eth" target="_blank" class="btn">
+                            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm3-6l-3 3-3-3 3-3 3 3z"/></svg>
+                            Buy
+                        </a>
+                        <button class="btn" onclick="showSection('tool-botnets')">
+                            <svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8zm0 14a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6zm-1-6h2v2h-2zm0-4h2v2h-2z"/></svg>
+                            Options
+                        </button>
+                    </div>
+                </div>
+                <div class="item">
+                    <h3>Packet Sniffers</h3>
+                    <p>Data snipe - $250 XMR</p>
+                    <div class="btn-group">
+                        <a href="https://t.me/Druid_eth" target="_blank" class="btn">
+                            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-10 10 10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2zm0 18a8 8 0 0 1-8-8c0-1.6.5-3 1.3-4.2L12 14.6l6.7-6.8A8 8 0 0 1 20 12a8 8 0 0 1-8 8z"/></svg>
+                            Buy
+                        </a>
+                        <button class="btn" onclick="showSection('tool-packet-sniffers')">
+                            <svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8zm0 14a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6zm-1-6h2v2h-2zm0-4h2v2h-2z"/></svg>
+                            Options
+                        </button>
+                    </div>
+                </div>
+                <div class="item">
+                    <h3>Crypters</h3>
+                    <p>Malware mask - $320 BTC</p>
+                    <div class="btn-group">
+                        <a href="https://t.me/Druid_eth" target="_blank" class="btn">
+                            <svg viewBox="0 0 24 24"><path d="M18 7h-2V6a4 4 0 0 0-8 0v1H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zm-8-1a2 2 0 0 1 4 0v1h-4zm8 12H6V9h12z"/></svg>
+                            Buy
+                        </a>
+                        <button class="btn" onclick="showSection('tool-crypters')">
+                            <svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8zm0 14a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6zm-1-6h2v2h-2zm0-4h2v2h-2z"/></svg>
+                            Options
+                        </button>
+                    </div>
+                </div>
+                <div class="item">
+                    <h3>Carding Tools</h3>
+                    <p>CC dumps - $400 XMR</p>
+                    <div class="btn-group">
+                        <a href="https://t.me/Druid_eth" target="_blank" class="btn">
+                            <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zM4 8h16V6h-16zm0 10v-6h16v6z"/></svg>
+                            Buy
+                        </a>
+                        <button class="btn" onclick="showSection('tool-carding-tools')">
+                            <svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8zm0 14a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6zm-1-6h2v2h-2zm0-4h2v2h-2z"/></svg>
+                            Options
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tool-stealer-logs">
+            <div class="tool-page">
+                <h3>Stealer Logs</h3>
+                <p>hackers steal databases containing usernames, passwords, emails, and personal details from websites. these stolen databases, known as “logs” or “dumps,” are sold on the dark web. they are often used for credential stuffing, where hackers try the same login details on multiple sites since many people reuse passwords.</p>
+                <button class="btn" onclick="showSection('tools')">
+                    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm-1-6l-3-3 3-3 1 1-2 2 2 2z"/></svg>
+                    Back
+                </button>
+            </div>
+        </section>
+
+        <section id="tool-ddos-for-hire">
+            <div class="tool-page">
+                <h3>DDoS-For-Hire Services</h3>
+                <p>distributed denial-of-service (ddos) attacks overwhelm a website or server with massive fake traffic, making it crash. hackers offer ddos-as-a-service, where anyone can pay to attack a website, often to sabotage competitors or blackmail businesses. these attacks are carried out using botnets (networks of hacked devices).</p>
+                <button class="btn" onclick="showSection('tools')">
+                    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm-1-6l-3-3 3-3 1 1-2 2 2 2z"/></svg>
+                    Back
+                </button>
+            </div>
+        </section>
+
+        <section id="tool-fake-login-pages">
+            <div class="tool-page">
+                <h3>Fake Login Pages</h3>
+                <p>hackers create exact copies of real websites like banks, social media, or crypto wallets. when a victim enters their login details, the hacker captures them. these pages are often spread through phishing emails, text messages, or ads. once stolen, credentials are used for account takeovers or sold on hacking forums.</p>
+                <button class="btn" onclick="showSection('tools')">
+                    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm-1-6l-3-3 3-3 1 1-2 2 2 2z"/></svg>
+                    Back
+                </button>
+            </div>
+        </section>
+
+        <section id="tool-wifi-hacking">
+            <div class="tool-page">
+                <h3>Wi-Fi Hacking Tools</h3>
+                <p>these tools break into wifi networks by cracking passwords or exploiting weak encryption. hackers use them to spy on internet traffic, steal passwords, or spread malware. public wifi networks are often targeted since many lack proper security, allowing hackers to intercept sensitive data like banking logins.</p>
+                <button class="btn" onclick="showSection('tools')">
+                    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm-1-6l-3-3 3-3 1 1-2 2 2 2z"/></svg>
+                    Back
+                </button>
+            </div>
+        </section>
+
+        <section id="tool-session-hijacker">
+            <div class="tool-page">
+                <h3>Session Hijacking Tools</h3>
+                <p>hackers steal session cookies, which are small files that keep users logged into websites. by hijacking these cookies, they can access a victim’s account without needing a password. this method is often used on social media and email accounts, bypassing two-factor authentication (2fa) in many cases.</p>
+                <button class="btn" onclick="showSection('tools')">
+                    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm-1-6l-3-3 3-3 1 1-2 2 2 2z"/></svg>
+                    Back
+                </button>
+            </div>
+        </section>
+
+        <section id="tool-cred-stealer">
+            <div class="tool-page">
+                <h3>Credential Stealers</h3>
+                <p>these programs extract saved usernames and passwords from web browsers, email clients, or apps. they run in the background and send stolen credentials to hackers. once obtained, these details are used for unauthorized access to bank accounts, social media, or even company systems.</p>
+                <button class="btn" onclick="showSection('tools')">
+                    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm-1-6l-3-3 3-3 1 1-2 2 2 2z"/></svg>
+                    Back
+                </button>
+            </div>
+        </section>
+
+        <section id="tool-rats">
+            <div class="tool-page">
+                <h3>RATs</h3>
+                <p>a rat is a type of malware that allows hackers to fully control an infected device remotely. they can steal files, turn on the camera, log keystrokes, or even use the device for further attacks. rats are often spread through email attachments, pirated software, or fake updates.</p>
+                <button class="btn" onclick="showSection('tools')">
+                    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm-1-6l-3-3 3-3 1 1-2 2 2 2z"/></svg>
+                    Back
+                </button>
+            </div>
+        </section>
+
+        <section id="tool-atm-malware">
+            <div class="tool-page">
+                <h3>ATM & POS Malware</h3>
+                <p>hackers install malware on atms or point-of-sale (pos) machines to steal credit card information. when customers insert their cards, the malware captures their card number and pin. hackers use this data to create cloned cards or sell the details on the dark web.</p>
+                <button class="btn" onclick="showSection('tools')">
+                    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm-1-6l-3-3 3-3 1 1-2 2 2 2z"/></svg>
+                    Back
+                </button>
+            </div>
+        </section>
+
+        <section id="tool-exploit-kits">
+            <div class="tool-page">
+                <h3>Exploit Kits</h3>
+                <p>these are automated tools that scan devices for known security flaws and exploit them to gain access. they are often used to spread malware or ransomware. many exploit kits work by targeting outdated software or unpatched systems, making regular software updates critical for security.</p>
+                <button class="btn" onclick="showSection('tools')">
+                    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm-1-6l-3-3 3-3 1 1-2 2 2 2z"/></svg>
+                    Back
+                </button>
+            </div>
+        </section>
+
+        <section id="tool-cryptojacker">
+            <div class="tool-page">
+                <h3>Cryptojacking Scripts</h3>
+                <p>these scripts secretly run on a victim’s device and use its processing power to mine cryptocurrency for hackers. users experience slow devices, overheating, and high electricity bills. cryptojacking is often spread through infected websites or fake downloads.</p>
+                <button class="btn" onclick="showSection('tools')">
+                    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm-1-6l-3-3 3-3 1 1-2 2 2 2z"/></svg>
+                    Back
+                </button>
+            </div>
+        </section>
+
+        <section id="tool-brute-forcer">
+            <div class="tool-page">
+                <h3>Brute Force & Dictionary Attack Tools</h3>
+                <p>these tools try thousands or millions of password combinations quickly to crack an account. brute force attacks test every possible combination, while dictionary attacks use common passwords from pre-made lists. weak or short passwords are easily cracked using these methods.</p>
+                <button class="btn" onclick="showSection('tools')">
+                    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm-1-6l-3-3 3-3 1 1-2 2 2 2z"/></svg>
+                    Back
+                </button>
+            </div>
+        </section>
+
+        <section id="tool-mitm-tools">
+            <div class="tool-page">
+                <h3>Man-In-The-Middle Tools</h3>
+                <p>hackers intercept internet traffic between a victim and a website, allowing them to steal sensitive information like passwords or credit card details. mitm attacks are common on unsecured public wifi networks, where hackers can eavesdrop on users without them realizing it.</p>
+                <button class="btn" onclick="showSection('tools')">
+                    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm-1-6l-3-3 3-3 1 1-2 2 2 2z"/></svg>
+                    Back
+                </button>
+            </div>
+        </section>
+
+        <section id="tool-keylogger">
+            <div class="tool-page">
+                <h3>Keyloggers</h3>
+                <p>keyloggers record everything a victim types on their keyboard, including passwords, messages, and credit card details. they are often installed through malware or usb devices. advanced keyloggers can also capture clipboard content and take screenshots.</p>
+                <button class="btn" onclick="showSection('tools')">
+                    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm-1-6l-3-3 3-3 1 1-2 2 2 2z"/></svg>
+                    Back
+                </button>
+            </div>
+        </section>
+
+        <section id="tool-phishing-kits">
+            <div class="tool-page">
+                <h3>Phishing Kits</h3>
+                <p>these are pre-made tools for launching phishing attacks. they include fake email templates, cloned websites, and scripts for stealing login details. even beginner hackers can use these kits to trick victims into entering their credentials on fake websites.</p>
+                <button class="btn" onclick="showSection('tools')">
+                    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm-1-6l-3-3 3-3 1 1-2 2 2 2z"/></svg>
+                    Back
+                </button>
+            </div>
+        </section>
+
+        <section id="tool-zero-day-exploits">
+            <div class="tool-page">
+                <h3>Zero-Day Exploits</h3>
+                <p>zero-days are software vulnerabilities that developers don’t yet know about, making them extremely dangerous. hackers use them to break into systems before a patch is released. these exploits are highly valuable and often sold on the dark web for huge sums.</p>
+                <button class="btn" onclick="showSection('tools')">
+                    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm-1-6l-3-3 3-3 1 1-2 2 2 2z"/></svg>
+                    Back
+                </button>
+            </div>
+        </section>
+
+        <section id="tool-botnets">
+            <div class="tool-page">
+                <h3>Botnets</h3>
+                <p>a botnet is a group of hacked devices controlled remotely by a hacker. botnets are used for ddos attacks, spreading malware, or mining cryptocurrency. victims often don’t realize their device is infected and being used in large-scale cyberattacks.</p>
+                <button class="btn" onclick="showSection('tools')">
+                    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm-1-6l-3-3 3-3 1 1-2 2 2 2z"/></svg>
+                    Back
+                </button>
+            </div>
+        </section>
+
+        <section id="tool-packet-sniffers">
+            <div class="tool-page">
+                <h3>Packet Sniffers</h3>
+                <p>these tools capture internet traffic and analyze it for sensitive data. hackers use them to steal login credentials, emails, and credit card details. packet sniffers are especially dangerous on public wifi networks, where data is often unencrypted.</p>
+                <button class="btn" onclick="showSection('tools')">
+                    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm-1-6l-3-3 3-3 1 1-2 2 2 2z"/></svg>
+                    Back
+                </button>
+            </div>
+        </section>
+
+        <section id="tool-crypters">
+            <div class="tool-page">
+                <h3>Crypters & Packers</h3>
+                <p>these tools hide malware from antivirus software by encrypting or modifying its code. hackers use them to ensure their viruses remain undetected. advanced crypters even change the malware’s appearance each time it runs, making detection harder.</p>
+                <button class="btn" onclick="showSection('tools')">
+                    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm-1-6l-3-3 3-3 1 1-2 2 2 2z"/></svg>
+                    Back
+                </button>
+            </div>
+        </section>
+
+        <section id="tool-carding-tools">
+            <div class="tool-page">
+                <h3>Carding Tools & CVV Dumps</h3>
+                <p>carding tools help hackers make fraudulent online purchases using stolen credit card details. cvv dumps contain credit card numbers, expiration dates, and security codes stolen from compromised payment systems. these details are sold in bulk on dark web marketplaces.</p>
+                <button class="btn" onclick="showSection('tools')">
+                    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm-1-6l-3-3 3-3 1 1-2 2 2 2z"/></svg>
+                    Back
+                </button>
+            </div>
+        </section>
+
+        <section id="services">
+            <h2>Jobs</h2>
+            <div class="grid gang-phish">
+                <div class="item gang-job">
+                    <h3>Shadow Builds</h3>
+                    <p>We’re craftin’ any kind website—phish traps, shadow drops, you name it. Hit the crew for client work.</p>
+                    <a href="https://t.me/Druid_eth" target="_blank" class="btn gang-btn">
+                        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm5 15l-1-5-7 4 3-7 5 1-3 7z"/></svg>
+                        Join Group
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="chat">
+            <h2>Crew</h2>
+            <div id="chat-box">
+                <p>[03/01 04:20] reaper: key ripper slaps, cop it</p>
+                <p>[03/01 04:21] ghost: mail ghoster fire, no cap</p>
+                <p>[03/01 04:23] boss: $200+ this week, free tool drop</p>
+                <p>[03/01 04:25] shade: twitter hack live, fam—move quick</p>
+                <p>[03/01 04:26] blade: db steal clean, 400 XMR worth it</p>
+            </div>
+            <div id="chat-form">
+                <input type="text" id="chat-input" placeholder="Drop heat...">
+                <button class="btn" onclick="sendChat()">
+                    <svg viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
+                    Send
+                </button>
+            </div>
+        </section>
+
+        <nav>
+            <a href="#home" onclick="showSection('home')" class="active">
+                <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                Home
+            </a>
+            <a href="#tools" onclick="showSection('tools')">
+                <svg viewBox="0 0 24 24"><path d="M18 7h-2V6a4 4 0 0 0-8 0v1H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zm-8-1a2 2 0 0 1 4 0v1h-4zm8 12H6V9h12z"/></svg>
+                Tools
+            </a>
+            <a href="#services" onclick="showSection('services')">
+                <svg viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-1 16H6V5h12z"/></svg>
+                Jobs
+            </a>
+            <a href="#chat" onclick="showSection('chat')">
+                <svg viewBox="0 0 24 24"><path d="M20 2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h14l4 4V4a2 2 0 0 0-2-2zm-2 12H6v-2h12zm0-3H6V9h12zm0-3H6V6h12z"/></svg>
+                Crew
+            </a>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+  </html>
